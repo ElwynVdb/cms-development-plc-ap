@@ -3,7 +3,9 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `plc`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `http://plccatalogus.local`,
+    defaultDescription: ``,
+    image: `http://plccatalogus.local/wp-content/uploads/2022/11/home_img.jpg`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
