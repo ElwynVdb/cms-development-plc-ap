@@ -1,0 +1,26 @@
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: min-content min-content, min-content;
+    grid-template-areas: "header" "main" "footer";
+
+    header {
+        grid-area: header;
+        margin-bottom: auto;
+        height: fit-content;
+    }
+
+    main {
+        grid-area: main;
+        height: fit-content;
+    }
+
+    footer {
+        margin-top: auto;
+        grid-area: footer;
+        height: fit-content;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
