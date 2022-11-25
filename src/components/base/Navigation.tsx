@@ -1,6 +1,5 @@
 import { Link } from "gatsby";
 import React from "react";
-import * as styles from "../../styles/Header.module.scss";
 
 const links = [
   {
@@ -19,7 +18,7 @@ const links = [
 
 const Navigation = () => {
   return (
-    <nav className={styles.navigation}>
+    <nav>
       <ul>
         {links.map((link, i) => (
           <li key={i}>
