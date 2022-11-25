@@ -16,7 +16,7 @@ const config: GatsbyConfig = {
     options: {
       "url": "http://plccatalogus.local/graphql"
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-styled-components"]
+  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-typegen", "gatsby-plugin-sass"]
 };
 
 export default config;

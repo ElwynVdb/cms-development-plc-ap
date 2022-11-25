@@ -11,4 +11,4 @@ const Plcs = () => {
 
 export default Plcs;
 
-export const Head: HeadFC = () => <Seo title="Programmable Logic Controllers" />;
+export const Head: HeadFC = () => <Seo title="PLCS" />;

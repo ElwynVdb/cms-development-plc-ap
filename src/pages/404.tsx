@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../components/Layout";
 import { Seo } from "../components/Seo";
 
 const NotFoundPage = () => {
-  return <Layout></Layout>;
+  return <>
+  </>
 };
 
 export default NotFoundPage;

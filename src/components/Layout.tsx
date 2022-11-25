@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import Footer from "./base/Footer";
 import Header from "./base/Header";
+import "../styles/App.module.css";
 
 export type LayoutProps = {
   children?: React.ReactNode;
@@ -8,11 +9,11 @@ export type LayoutProps = {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <div>
+    <>
       <Header />
       <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 
