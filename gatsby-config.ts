@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `plc`,
-    siteUrl: `http://plccatalogus.local`,
+    siteUrl: `https://www.vanderborght.dev/plc-agency/`,
     defaultDescription: ``,
     image: `http://plccatalogus.local/wp-content/uploads/2022/11/home_img.jpg`,
   },
@@ -14,7 +14,7 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-wordpress',
     options: {
-      "url": "http://plccatalogus.local/graphql"
+      "url": "https://www.vanderborght.dev/plc-agency/graphql"
     }
   }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-typegen", "gatsby-plugin-sass"]
 };
