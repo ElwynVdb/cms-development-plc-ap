@@ -1,5 +1,9 @@
 import type { GatsbyConfig } from "gatsby";
 
+require("dotenv").config({
+  path: `.env`,
+});
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `plc`,
@@ -14,7 +18,6 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-wordpress',
     options: {
-      "protocol":"https",
       "url": "https://www.vanderborght.dev/plc-agency/graphql"
     }
   }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-typegen", "gatsby-plugin-sass"]
