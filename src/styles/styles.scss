@@ -22,15 +22,15 @@ ul {
 }
 
 .layoutContainer {
-    height: 100%;
+    min-height: 100%;
     display: grid;
-    grid-template-rows: min-content min-content, min-content;
-    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: min-content;
+    grid-template-areas: "header" 
+    "main" 
+    "footer";
 
     header {
         grid-area: header;
-        margin-bottom: auto;
-
         display: flex;
         justify-content: space-between;
         line-height: var(--header-size);
