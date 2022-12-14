@@ -1,12 +1,12 @@
-import { graphql, HeadFC, useStaticQuery } from "gatsby";
-import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
+import { graphql, HeadFC } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React, { FC } from "react";
 import { Seo } from "../components/Seo";
 import parse from "html-react-parser";
 import { HomeFields } from "../interfaces/home/HomeFields";
 
 const IndexPage: FC<{ data: Data }> = ({ data: { wpPage: { home_fields } } }) => {
-  const image = getImage(home_fields.picture.gatsbyImage as ImageDataLike);
+  const image = getImage(home_fields.picture.gatsbyImage);
 
   return (
     <div className="wrapper home">
@@ -27,15 +27,9 @@ const IndexPage: FC<{ data: Data }> = ({ data: { wpPage: { home_fields } } }) =>
         <section className="home__featured__products">
           {home_fields.featuredProducts.map((s, i) => (
             <article key={i} className="home__featured__product">
-              <h2 className="home__featured__product__name">
-                {s.plcFields.serialNumber}
-              </h2>
+              <h2 className="home__featured__product__name">{s.plcFields.serialNumber}</h2>
               <GatsbyImage
-                image={
-                  getImage(
-                    s.plcFields.mainPicture.gatsbyImage as ImageDataLike
-                  )!
-                }
+                image={getImage(s.plcFields.mainPicture.gatsbyImage)!}
                 alt={s.plcFields.serialNumber}
                 className="home__featured__product__image"
               />

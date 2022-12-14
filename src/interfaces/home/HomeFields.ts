@@ -1,4 +1,4 @@
-import { Picture } from "../gatsbyImage/Picture";
+import { Picture } from "../Picture";
 import { FeaturedProduct } from "./FeaturedProduct";
 
 export interface HomeFields {

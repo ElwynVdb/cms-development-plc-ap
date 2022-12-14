@@ -1,4 +1,4 @@
-import { Picture } from "../gatsbyImage/Picture";
+import { Picture } from "../Picture";
 
 export interface PlcFields {
     height: number;
