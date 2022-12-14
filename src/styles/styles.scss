@@ -17,6 +17,15 @@ body,
     height: 100%;
 }
 
+.center {
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 1300px;
+    margin: 0 auto;
+}
+
 ul {
     list-style: none;
 }
@@ -25,14 +34,12 @@ ul {
     min-height: 100%;
     display: grid;
     grid-template-rows: min-content;
-    grid-template-areas: "header" 
-    "main" 
-    "footer";
+    grid-template-areas: "header"
+        "main"
+        "footer";
 
     header {
         grid-area: header;
-        display: flex;
-        justify-content: space-between;
         line-height: var(--header-size);
         height: var(--header-size);
         background-color: gray;
@@ -41,15 +48,22 @@ ul {
             text-indent: 1.5rem;
         }
 
-        nav {
-            ul {
-                display: flex;
+        >div {
+            display: flex;
+            justify-content: flex-end;
 
-                li {
-                    padding: 0 25px;
+            nav {
+                margin-right: 3rem;
 
-                    a {
-                        font-size: 1.3rem;
+                ul {
+                    display: flex;
+
+                    li {
+                        padding: 0 25px;
+
+                        a {
+                            font-size: 1.3rem;
+                        }
                     }
                 }
             }
@@ -59,6 +73,64 @@ ul {
     main {
         grid-area: main;
         height: fit-content;
+        margin-bottom: 1rem;
+
+        & .home {
+
+            &__title {
+                font-size: 2rem;
+                margin: 1rem 0;
+                gap: 2rem;
+            }
+
+            &__info {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 3rem;
+
+                &__description {
+                    margin-top: 1.5rem;
+                    letter-spacing: 0.1rem;
+                    line-height: 1.5rem;
+                    width: 50%;
+                }
+
+                &__image {
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 45%;
+                }
+            }
+
+            .feature-wrap {
+                position: relative;
+                height: 300px;
+
+                .home__featured__products {
+                    width: 100%;
+                    position: absolute;
+                    transform: translateY(-50%);
+                    top:50%;
+
+                    display: flex;
+                    justify-content: center;
+                    gap: 5rem;
+
+                    & .home__featured__product {
+
+                        &__name {
+                            text-align: center;
+                            margin-bottom: 1rem;
+                        }
+
+                        &__image {
+                            width: 200px;
+                            height: 150px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     footer {
