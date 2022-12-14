@@ -4,8 +4,7 @@ import Navigation from "./Navigation";
 const Header = () => {
   return (
     <header>
-      <h1>PLC Catalogus</h1>
-      <Navigation />
+      <div className="wrapper"> <Navigation /></div>  
     </header>
   );
 };
