@@ -20,7 +20,7 @@ const config: GatsbyConfig = {
     options: {
       "url": "https://www.vanderborght.dev/plc-agency/graphql"
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-typegen", "gatsby-plugin-sass"]
+  },  "gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-typegen"]
 };
 
 export default config;
