@@ -10,9 +10,13 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Plcs: FC<MainData<PLCSData>> = ({ data: { wpPage: { products_fields }, allWpPlc: { edges } } }) => {
   return <div className="wrapper plcs">
-    <h1>{products_fields.title}</h1>
-    <p>{parse(products_fields.description)}</p>
-    <GatsbyImage image={getImage(products_fields.picture.gatsbyImage)!} alt="plc-image" />
+    <section className="plcs__info">
+      <div>
+        <h1 className="plcs__info__title">{products_fields.title}</h1>
+        <span className="plcs__info__description">{parse(products_fields.description)}</span>
+      </div>
+      <GatsbyImage className="plcs__info__image" image={getImage(products_fields.picture.gatsbyImage)!} alt="plc-image" />
+    </section>
 
     <section className="plcs__products__display">
       {edges.map(({ node: { plcFields } }, i) => <article key={i} className="plcs__product">

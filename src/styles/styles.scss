@@ -76,23 +76,28 @@ ul {
         margin-bottom: 1rem;
 
         & .home {
-
-            &__title {
-                font-size: 2rem;
-                margin: 1rem 0;
-                gap: 2rem;
-            }
-
+            margin-top: 1rem;
+      
             &__info {
+                justify-content: space-around;
                 display: flex;
-                justify-content: center;
+                margin: 0 auto;
                 margin-bottom: 3rem;
+                width: 1300px;
+
+                &__title {
+                    font-size: 2rem;
+                    margin: 1rem 0;
+                    gap: 2rem;
+                    width: fit-content;
+                }
 
                 &__description {
+                    display: block;
                     margin-top: 1.5rem;
                     letter-spacing: 0.1rem;
                     line-height: 1.5rem;
-                    width: 50%;
+                    width: 750px
                 }
 
                 &__image {
@@ -110,7 +115,7 @@ ul {
                     width: 100%;
                     position: absolute;
                     transform: translateY(-50%);
-                    top:50%;
+                    top: 50%;
 
                     display: flex;
                     justify-content: center;
@@ -133,7 +138,38 @@ ul {
         }
 
         & .plcs {
-           &__products__display {
+            margin-top: 1rem;
+
+            &__info {
+                justify-content: space-around;
+                display: flex;
+                margin: 0 auto;
+                margin-bottom: 3rem;
+
+                &__title {
+                    font-size: 2rem;
+                    margin: 1rem 0;
+                    gap: 2rem;
+                    width: fit-content;
+                }
+
+                &__description {
+                    display: block;
+                    width: fit-content;
+                    margin-top: 1.5rem;
+                    letter-spacing: 0.1rem;
+                    line-height: 1.5rem;
+                    width: 750px
+                }
+
+                &__image {
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 45%;
+                }
+            }
+
+            &__products__display {
                 width: 100%;
 
                 display: flex;

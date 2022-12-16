@@ -10,18 +10,19 @@ const IndexPage: FC<{ data: Data }> = ({ data: { wpPage: { home_fields } } }) =>
 
   return (
     <div className="wrapper home">
-      <p className="home__title">{home_fields.title}</p>
-
-      <div className="home__info">
-        <span className="home__info__description">
-          {parse(home_fields.description)}
-        </span>
+      <section className="home__info">
+        <div>
+          <h1 className="home__info__title">{home_fields.title}</h1>
+          <span className="home__info__description">
+            {parse(home_fields.description)}
+          </span>
+        </div>
         <GatsbyImage
           class="home__info__image"
           image={image!}
           alt={"PLC Image"}
         />
-      </div>
+      </section>
 
       <div className="feature-wrap">
         <section className="home__featured__products">
