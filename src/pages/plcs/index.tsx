@@ -7,6 +7,7 @@ import { PlcFields } from "../../interfaces/plc/PlcFields";
 import { ProductsFields } from "../../interfaces/products/ProductsFields";
 import parse from "html-react-parser";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import PlcCardsDisplay from "../../components/PlcCardsDisplay";
 
 const Plcs: FC<MainData<PLCSData>> = ({ data: { wpPage: { products_fields }, allWpPlc: { edges } } }) => {
   return <div className="wrapper plcs">
@@ -18,12 +19,7 @@ const Plcs: FC<MainData<PLCSData>> = ({ data: { wpPage: { products_fields }, all
       <GatsbyImage className="plcs__info__image" image={getImage(products_fields.picture.gatsbyImage)!} alt="plc-image" />
     </section>
 
-    <section className="plcs__products__display">
-      {edges.map(({ node: { plcFields } }, i) => <article key={i} className="plcs__product">
-        <h2 className="plcs__product__name">{plcFields.serialNumber}</h2>
-        <GatsbyImage className="plcs__product__image" image={getImage(plcFields.mainPicture.gatsbyImage)!} alt={plcFields.serialNumber} />
-      </article>)}
-    </section>
+    <PlcCardsDisplay plcData={edges.map((e) => e.node.plcFields)}/>
   </div>
 }
 

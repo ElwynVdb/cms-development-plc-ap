@@ -77,7 +77,7 @@ ul {
 
         & .home {
             margin-top: 1rem;
-      
+
             &__info {
                 justify-content: space-around;
                 display: flex;
@@ -120,19 +120,6 @@ ul {
                     display: flex;
                     justify-content: center;
                     gap: 5rem;
-
-                    & .home__featured__product {
-
-                        &__name {
-                            text-align: center;
-                            margin-bottom: 1rem;
-                        }
-
-                        &__image {
-                            width: 200px;
-                            height: 150px;
-                        }
-                    }
                 }
             }
         }
@@ -175,19 +162,6 @@ ul {
                 display: flex;
                 justify-content: center;
                 gap: 5rem;
-
-                & .plcs__product {
-
-                    &__name {
-                        text-align: center;
-                        margin-bottom: 1rem;
-                    }
-
-                    &__image {
-                        width: 200px;
-                        height: 150px;
-                    }
-                }
             }
         }
     }
@@ -198,5 +172,26 @@ ul {
         height: fit-content;
         text-align: center;
         padding: 15px;
+    }
+
+
+    .plc__cards__display {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+
+        .plc__card {
+            &__name {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            &__image {
+                width: 200px;
+                height: 150px;
+            }
+        }
     }
 }
