@@ -37,119 +37,118 @@ ul {
     grid-template-areas: "header"
         "main"
         "footer";
+}
 
-    header {
-        grid-area: header;
-        line-height: var(--header-size);
-        height: var(--header-size);
-        background-color: gray;
+header {
+    grid-area: header;
+    line-height: var(--header-size);
+    height: var(--header-size);
+    background-color: gray;
 
-        h1 {
-            text-indent: 1.5rem;
-        }
+    h1 {
+        text-indent: 1.5rem;
+    }
 
-        >div {
-            display: flex;
-            justify-content: flex-end;
+    >div {
+        display: flex;
+        justify-content: flex-end;
 
-            nav {
-                margin-right: 3rem;
+        nav {
+            margin-right: 3rem;
 
-                ul {
-                    display: flex;
+            ul {
+                display: flex;
 
-                    li {
-                        padding: 0 25px;
+                li {
+                    padding: 0 25px;
 
-                        a {
-                            font-size: 1.3rem;
-                        }
+                    a {
+                        font-size: 1.3rem;
                     }
                 }
             }
         }
     }
+}
 
-    main {
-        grid-area: main;
-        height: fit-content;
-        margin-bottom: 1rem;
+main {
+    grid-area: main;
+    height: fit-content;
+    margin-bottom: 1rem;
 
-        & .home {
-            margin-top: 1rem;
-        }
-
-        & .plcs {
-            margin-top: 1rem;
-        }
+    & .home {
+        margin-top: 1rem;
     }
 
-    footer {
-        margin-top: auto;
-        grid-area: footer;
-        height: fit-content;
-        text-align: center;
-        padding: 15px;
+    & .plcs {
+        margin-top: 1rem;
     }
+}
 
-    .hero {
-        justify-content: space-around;
-        display: flex;
-        margin: 0 auto;
-        margin-bottom: 3rem;
-        width: 1300px;
+footer {
+    margin-top: auto;
+    grid-area: footer;
+    height: fit-content;
+    text-align: center;
+    padding: 15px;
+}
 
-        &__info {
-            &__title {
-                font-size: 2rem;
-                margin: 1rem 0;
-                gap: 2rem;
-                width: fit-content;
-            }
+.hero {
+    justify-content: space-around;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: 1300px;
 
-            &__description {
-                display: block;
-                margin-top: 1.5rem;
-                letter-spacing: 0.1rem;
-                line-height: 1.5rem;
-                width: 750px
-            }
-
-            &__image {
-                width: 250px;
-                height: 250px;
-                border-radius: 45%;
-            }
-        }
-    }
-
-    .named__section {
-        h1 {
+    &__info {
+        &__title {
             font-size: 2rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 0.5rem;
-            border-bottom: solid thin black;
+            margin: 1rem 0;
+            gap: 2rem;
+            width: fit-content;
+        }
+
+        &__description {
+            display: block;
+            margin-top: 1.5rem;
+            letter-spacing: 0.1rem;
+            line-height: 1.5rem;
+            width: 750px
+        }
+
+        &__image {
+            width: 250px;
+            height: 250px;
+            border-radius: 45%;
         }
     }
+}
 
-    .plc__cards__display {
-        width: 100%;
-
-        display: flex;
-        justify-content: center;
-        gap: 5rem;
-
-        .plc__card {
-            &__name {
-                text-align: center;
-                margin-bottom: 1rem;
-            }
-
-            &__image {
-                width: 200px;
-                height: 150px;
-            }
-        }
+.named__section {
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 0.5rem;
+        border-bottom: solid thin black;
     }
+}
+
+.plc__card {
+    &__name {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &__image {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+.plc__cards__display {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
 }
