@@ -8,18 +8,20 @@ import { ProductsFields } from "../../interfaces/products/ProductsFields";
 import parse from "html-react-parser";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import PlcCardsDisplay from "../../components/PlcCardsDisplay";
+import NamedSection from "../../components/NamedSection";
+import Hero from "../../components/Hero";
 
 const Plcs: FC<MainData<PLCSData>> = ({ data: { wpPage: { products_fields }, allWpPlc: { edges } } }) => {
-  return <div className="wrapper plcs">
-    <section className="plcs__info">
-      <div>
-        <h1 className="plcs__info__title">{products_fields.title}</h1>
-        <span className="plcs__info__description">{parse(products_fields.description)}</span>
-      </div>
-      <GatsbyImage className="plcs__info__image" image={getImage(products_fields.picture.gatsbyImage)!} alt="plc-image" />
-    </section>
+  const image = getImage(products_fields.picture.gatsbyImage);
 
-    <PlcCardsDisplay plcData={edges.map((e) => e.node.plcFields)}/>
+
+
+  return <div className="wrapper plcs">
+    <Hero title={products_fields.title} description={products_fields.description} image={image} />
+
+    <NamedSection title="Products">
+      <PlcCardsDisplay plcData={edges.map((e) => e.node.plcFields)} />
+    </NamedSection>
   </div>
 }
 

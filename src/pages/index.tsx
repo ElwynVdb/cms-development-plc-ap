@@ -5,29 +5,19 @@ import { Seo } from "../components/Seo";
 import parse from "html-react-parser";
 import { HomeFields } from "../interfaces/home/HomeFields";
 import PlcCardsDisplay from "../components/PlcCardsDisplay";
+import NamedSection from "../components/NamedSection";
+import Hero from "../components/Hero";
 
 const IndexPage: FC<{ data: Data }> = ({ data: { wpPage: { home_fields } } }) => {
   const image = getImage(home_fields.picture.gatsbyImage);
 
   return (
     <div className="wrapper home">
-      <section className="home__info">
-        <div>
-          <h1 className="home__info__title">{home_fields.title}</h1>
-          <span className="home__info__description">
-            {parse(home_fields.description)}
-          </span>
-        </div>
-        <GatsbyImage
-          class="home__info__image"
-          image={image!}
-          alt={"PLC Image"}
-        />
-      </section>
+      <Hero title={home_fields.title} description={home_fields.description} image={image} />
 
-      <div className="feature-wrap">
+      <NamedSection title="Featured Products">
         <PlcCardsDisplay plcData={home_fields.featuredProducts.map((e) => e.plcFields)} />
-      </div>
+      </NamedSection>
     </div>
   );
 };
