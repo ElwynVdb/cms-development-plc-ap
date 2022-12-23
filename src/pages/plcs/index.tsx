@@ -12,22 +12,16 @@ import NamedSection from "../../components/NamedSection";
 import Hero from "../../components/Hero";
 
 const Plcs: FC<MainData<PLCSData>> = ({ data: { wpPage: { products_fields }, allWpPlc: { edges } } }) => {
-  const image = getImage(products_fields.picture.gatsbyImage);
-
-
+  const plcFields = edges.map(e => e.node.plcFields);
 
   return <div className="wrapper plcs">
-    <Hero title={products_fields.title} description={products_fields.description} image={image} />
+    <Hero title={products_fields.title} description={products_fields.description} image={products_fields.picture} />
 
     <NamedSection title="Products">
-      <PlcCardsDisplay plcData={edges.map((e) => e.node.plcFields)} />
+      <PlcCardsDisplay plcData={plcFields.map((plcFields) => plcFields)} />
     </NamedSection>
   </div>
 }
-
-export default Plcs;
-
-export const Head: HeadFC = () => <Seo title="PLCS" />;
 
 export interface PLCSData {
   allWpPlc: Edges<{ plcFields: PlcFields; }>;
@@ -44,22 +38,42 @@ query PLCSDataQuery {
           inputs
           length
           mainPicture {
-            gatsbyImage(placeholder: BLURRED, width: 500)
+            altText
+            localFile {
+              childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
           }
           operatingCurrent
           operatingVoltage
           outputs
           portType
           programmingPossibilties
-          promoImage1 {
-            gatsbyImage(placeholder: BLURRED, width: 500)
+          promoImage1 { 
+            altText
+            localFile {
+              childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
           }
+        }
           promoImage2 {
-            gatsbyImage(placeholder: BLURRED, width: 500)
+            altText
+            localFile {
+              childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
           }
+        }
           promoImage3 {
-            gatsbyImage(placeholder: BLURRED, width: 500)
+            altText
+            localFile {
+              childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
           }
+        }
           serialNumber
           series
           usageEnvironment
@@ -73,9 +87,18 @@ query PLCSDataQuery {
       title
       description
       picture {
-        gatsbyImage(placeholder: BLURRED, width: 500)
+        altText
+        localFile {
+          childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
       }
     }
   }
+ }
 }
 `;
+
+export default Plcs;
+
+export const Head: HeadFC = () => <Seo title="PLCS" />;

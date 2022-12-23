@@ -6,7 +6,7 @@ import parse from "html-react-parser";
 interface HeroProps {
     title:string;
     description:string;
-    image: IGatsbyImageData | undefined;
+    image: Picture;
 }
 
 const Hero: FC<HeroProps> = ({ title, description, image }) => {
@@ -20,8 +20,8 @@ const Hero: FC<HeroProps> = ({ title, description, image }) => {
 
         <GatsbyImage
             class="hero__info__image"
-            image={image!}
-            alt={"PLC Image"}
+            image={getImage(image.localFile.childImageSharp.gatsbyImageData)!}
+            alt={image.altText}
         />
     </section>
 }

@@ -1,5 +1,6 @@
-import { ImageDataLike } from "gatsby-plugin-image";
+import { LocalFile } from './LocalFile';
 
 export interface Picture {
-    gatsbyImage: ImageDataLike;
+    altText: string;
+    localFile: LocalFile;
 }

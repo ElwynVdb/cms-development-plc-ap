@@ -2,7 +2,7 @@ import { graphql } from "gatsby";
 import React from "react";
 
 const PlcPage = ({ data }: { data: any }) => {
-    return <></>
+  return <></>
 }
 
 export const plcQuery = graphql`
@@ -22,16 +22,36 @@ query plcQuery($slug: String) {
       inputs
       height
       mainPicture {
-        gatsbyImage(width: 500, placeholder: BLURRED)
+        altText
+        localFile {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
       }
+    }
       promoImage1 {
-        gatsbyImage(width: 500, placeholder: BLURRED)
+        altText
+        localFile {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+      }
       }
       promoImage2 {
-        gatsbyImage(width: 500, placeholder: BLURRED)
+        altText
+        localFile {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+      }
       }
       promoImage3 {
-        gatsbyImage(width: 500, placeholder: BLURRED)
+        altText
+        localFile {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
       }
     }
   }
