@@ -2,7 +2,9 @@ import { graphql } from "gatsby";
 import React from "react";
 
 const PlcPage = ({ data }: { data: any }) => {
-  return <></>
+  return <>
+    
+  </>
 }
 
 export const plcQuery = graphql`
