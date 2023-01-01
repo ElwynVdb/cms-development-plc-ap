@@ -1,13 +1,19 @@
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import React from "react";
 import { PlcFields } from "../../interfaces/plc/PlcFields";
 import PlcSpecifications from "../../components/PlcSpecifications";
 import NamedSection from "../../components/NamedSection";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import TagDisplay from "../../components/TagDisplay";
 
 const PlcPage = ({ data: { wpPlc: { plcFields } } }: { data: Data }) => {
+  const goBackText = "< Go Back"
   return <div className="plc-details wrapper">
-    <h1 className="plc-details__title">{plcFields.serialNumber}</h1>
+    <Link className="plc-details-back" to="/plcs/">{goBackText}</Link>
+    <section>
+      <h1 className="plc-details__title">{plcFields.serialNumber}</h1>
+      <TagDisplay tags={["Hi", "hola"]}/>
+    </section>
     <section className="wrapper">
     <GatsbyImage className="plc-details__image" image={getImage(plcFields.mainPicture.localFile.childImageSharp.gatsbyImageData)!} alt={plcFields.mainPicture.altText}/>
     <NamedSection title="Properties">

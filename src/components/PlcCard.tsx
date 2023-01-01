@@ -9,7 +9,6 @@ interface PlcCardProps {
 
 const PlcCard: FC<PlcCardProps> = ({ plcFields }) => {
     const cleanLink = "/plcs/" + plcFields.serialNumber.toLowerCase().replace(/(\.| )/g, "-");
-    console.log(cleanLink);
 
     return <Link to={cleanLink}>
         <article className="plc__card">
