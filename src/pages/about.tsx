@@ -23,6 +23,7 @@ const About = () => {
                 <label htmlFor="description">Message<span className="required">*</span></label>
                 <textarea name="description" id="description" cols={30} rows={10} placeholder={"Your Message"} required></textarea>
                 <input type="submit" value="Send" />
+                <input type="hidden" name="form-name" value="contact"></input>
             </form>
         </NamedSection>
     </div>
