@@ -148,7 +148,7 @@ footer {
 
     &__image {
         width: 200px;
-        height: 150px;
+        height: 200px;
     }
 }
 
@@ -211,6 +211,6 @@ footer {
     }
 
     &__image {
-        width: 450px;
+        max-width: 450px;
     }
 }
