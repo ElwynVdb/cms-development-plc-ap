@@ -172,7 +172,7 @@ footer {
     justify-content: center;
     column-gap: 1rem;
 
-    > .tag {
+    >.tag {
         padding: 5px 7px;
         background-color: gray;
         border-radius: 25px;
@@ -185,6 +185,7 @@ footer {
     tbody {
         text-align: center;
         margin: 0 auto;
+
         th {
             text-align: start;
             width: 250px;
@@ -200,21 +201,21 @@ footer {
         font-weight: bold;
     }
 
-    > section:first-of-type {
+    >section:first-of-type {
         text-align: center;
     }
 
-    > section:nth-of-type(2) {
+    >section:nth-of-type(2) {
         margin-top: 3rem;
         display: flex;
         justify-content: center;
-        gap:2rem;
+        gap: 2rem;
     }
 
-    > section:nth-of-type(3) {
+    >section:nth-of-type(3) {
         margin-top: 2rem;
     }
-    
+
     &__featured {
         display: flex;
         justify-content: center;
@@ -235,5 +236,52 @@ footer {
 
     &__image {
         max-width: 450px;
+    }
+}
+
+.about {
+    margin-top: 1.5rem;
+
+    &__details {
+        box-shadow: 7px 0px inset;
+        margin: 1rem 0;
+        text-indent: 1rem;
+    }
+
+    &__contact {
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+
+        .required {
+            color: red;
+            padding-left: 0.1rem;
+        }
+
+        input,
+        textarea {
+            display: block;
+            width: 750px;
+            resize: none;
+        }
+
+        label {
+            display: block;
+            margin: 0.2rem 0 0.1rem 0;
+            font-size: 1.3rem;
+        }
+
+        input {
+            height: 50px;
+            font-size: 1.2rem;
+        }
+
+        input[type=submit] {
+            margin-top: 1rem;
+        }
+
+        textarea {
+            height: 200px;
+        }
     }
 }
