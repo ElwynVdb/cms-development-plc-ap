@@ -10,7 +10,7 @@ import { NameNode } from "../../interfaces/NameNode";
 const PlcPage = ({ data: { wpPlc: { plcFields, types, methods, outputs } } }: { data: Data }) => {
   const goBackText = "< Go Back";
 
-  const mapNames = (entry:NameNode) => entry.nodes.map(n => n.name);  
+  const mapNames = (entry: NameNode) => entry.nodes.map(n => n.name);
 
   const combinedTags = [...mapNames(types), ...mapNames(methods), ...mapNames(outputs)];
 
@@ -39,6 +39,12 @@ const PlcPage = ({ data: { wpPlc: { plcFields, types, methods, outputs } } }: { 
         ]} />
       </NamedSection>
     </section>
+
+    <NamedSection title="Featured Images" className="plc-details__featured">
+      {plcFields.promoImage1 && <GatsbyImage className="plc-details__featured__image" image={getImage(plcFields.promoImage1.localFile.childImageSharp.gatsbyImageData)!} alt={plcFields.promoImage1.altText} />}
+      {plcFields.promoImage2 && <GatsbyImage className="plc-details__featured__image" image={getImage(plcFields.promoImage2.localFile.childImageSharp.gatsbyImageData)!} alt={plcFields.promoImage2.altText} />}
+      {plcFields.promoImage3 && <GatsbyImage className="plc-details__featured__image" image={getImage(plcFields.promoImage3.localFile.childImageSharp.gatsbyImageData)!} alt={plcFields.promoImage3.altText} />}
+    </NamedSection>
   </div>
 }
 

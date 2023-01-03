@@ -141,6 +141,8 @@ footer {
 }
 
 .plc__card {
+    padding: 7px;
+
     &__name {
         text-align: center;
         margin-bottom: 1rem;
@@ -149,6 +151,10 @@ footer {
     &__image {
         width: 200px;
         height: 200px;
+    }
+
+    &:hover {
+        background-color: rgba(206, 205, 205, 0.741);
     }
 }
 
@@ -203,6 +209,23 @@ footer {
         display: flex;
         justify-content: center;
         gap:2rem;
+    }
+
+    > section:nth-of-type(3) {
+        margin-top: 2rem;
+    }
+    
+    &__featured {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        column-gap: 2rem;
+        flex-wrap: wrap;
+
+        &__image {
+            width: 200px;
+            height: 200px;
+        }
     }
 
     &__title {
