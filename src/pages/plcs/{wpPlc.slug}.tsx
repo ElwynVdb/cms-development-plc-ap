@@ -26,8 +26,8 @@ const PlcPage = ({ data: { wpPlc: { plcFields, types, methods, outputs } } }: { 
         <PlcSpecifications specifications={[
           ["Series", [plcFields.series]],
           ["Serial Number", [plcFields.serialNumber]],
-          ["Input Count", [plcFields.inputs]],
-          ["Output Count", [plcFields.outputs]],
+          ["Input Count", [plcFields.inputs, "digital"]],
+          ["Output Count", [plcFields.outputs, "digital"]],
           ["Output Type", [plcFields.portType]],
           ["Operating Voltage", [plcFields.operatingVoltage, "V"]],
           ["Operating Current", [plcFields.operatingCurrent, "mA"]],
