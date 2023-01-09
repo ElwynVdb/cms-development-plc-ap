@@ -31,9 +31,9 @@ const PlcPage = ({ data: { wpPlc: { plcFields, types, methods, outputs } } }: { 
           ["Output Type", [plcFields.portType]],
           ["Operating Voltage", [plcFields.operatingVoltage, "V"]],
           ["Operating Current", [plcFields.operatingCurrent, "mA"]],
-          ["Width", [plcFields.width]],
-          ["Height", [plcFields.height]],
-          ["Length", [plcFields.length]],
+          ["Width", [plcFields.width, "mm"]],
+          ["Height", [plcFields.height, "mm"]],
+          ["Length", [plcFields.length, "mm"]],
           ["Programming Possibilities", plcFields.programmingPossibilties],
           ["Environment", [plcFields.usageEnvironment]]
         ]} />
